@@ -1,6 +1,8 @@
 class Api::ExamplePagesController < ApplicationController
   def hello_method
-    render json: {message: 'helllo'}
+
+    time = Time.now.strftime("%m/%d/%Y")
+    render 'hello_view.json.jbuilder'
   end
 
   def billy
